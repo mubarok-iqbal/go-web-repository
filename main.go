@@ -5,6 +5,7 @@ import (
 	"fmt"
 	"log"
 	"net/http"
+	"os"
 
 	"github.com/julienschmidt/httprouter"
 )
@@ -21,6 +22,7 @@ func main() {
 	router.PUT("/age-rating-category/:id/update", UpdateAgeRatingCategory)
 	router.DELETE("/age-rating-category/:id/delete", DeleteAgeRatingCategory)
 
-	fmt.Println("Server Running at Port 9898")
-	log.Fatal(http.ListenAndServe(":9898", router))
+	port := os.Getenv("SERVER_PORT")
+	fmt.Printf("Server Running at Port %s\n", port)
+	log.Fatal(http.ListenAndServe(":"+port, router))
 }
