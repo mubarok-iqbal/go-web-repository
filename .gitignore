@@ -1,0 +1,36 @@
+# Direktori biner hasil kompilasi Go
+/bin/
+/pkg/
+
+# Direktori dependensi jika Anda menggunakan Go Modules
+/vendor/
+
+# File eksekusi dan library berkas bersama
+*.exe
+*.dll
+*.so
+
+# File konfigurasi lokal
+.env
+.env.local
+
+# Direktori log dan file sementara
+/logs/
+/tmp/
+
+# Direktori build
+/build/
+
+# File editor dan file sementara
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# File sistem berkas dan direktori yang tersembunyi (biasanya sistem operasi)
+.DS_Store
+Thumbs.db
+
+# File konfigurasi Visual Studio Code
+.vscode/
+.editorconfig
